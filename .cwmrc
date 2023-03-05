@@ -1,0 +1,76 @@
+# --------------------------------------------------------------
+# cwmrc
+# by Mizu.Taifux
+# 2022 - Simple setup
+# Que a luz que a em ti não sejam trevas...
+# --------------------------------------------------------------
+borderwidth 2
+color activeborder orange
+color inactiveborder purple
+gap 7 7 7 7
+snapdist 7
+vtile 50
+htile 50
+sticky yes
+
+# ignora pregram by the tag name by not drawing borders arround them.
+ignore tdc
+trayer
+ignore polybar 
+
+unbind-key all
+
+# Menu / Font
+color menubg "white"
+color menufg "orange"
+color font "purple"
+color selfont "black"
+fontname terminus
+
+# Open Applications
+bind-key 4-Return alacritty
+bind-key 4-w firefox
+bind-key 4-r "rofi -show run"
+
+# Close Window
+bind-key 4-q window-close
+
+# unbind default mouse actions
+unbind-mouse M-1
+unbind-mouse M-2
+unbind-mouse M-3
+
+# mod + left click drag = move window
+bind-mouse 4-1 window-move
+# mod + right click drag = resize window
+bind-mouse 4-3 window-resize
+
+# Reload CWM
+bind-key 4S-r restart
+
+# Suspend Session
+bind-key 4S-s "systemctl suspend"
+
+# Modify .cwmrc
+bind-key 4S-m "geany .cwmrc"
+
+# Quit CWM
+bind-key 4S-q quit
+
+
+# window snap
+bind-key 4C-t window-snap-up
+bind-key 4C-b window-snap-down
+bind-key 4C-l window-snap-left
+bind-key 4C-r window-snap-right
+bind-key 4C-v window-vtile
+bind-key 4C-h window-htile
+bind-key 4C-m window-maximize
+bind-key 4C-f window-fullscreen
+
+
+# application menu
+command Terminal alacritty
+command Browser firefox
+command vscodium vscodium
+command emacs emacs
