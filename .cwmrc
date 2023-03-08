@@ -17,7 +17,8 @@ sticky yes
 # ignora pregram by the tag name by not drawing borders arround them.
 ignore tdc
 trayer
-ignore polybar 
+ignore polybar
+ignore conky
 
 unbind-key all
 
@@ -29,7 +30,7 @@ color selfont "black"
 fontname terminus
 
 # Open Applications
-bind-key 4-Return urxvt
+bind-key 4-Return kitty
 bind-key 4-w firefox
 bind-key 4-r "rofi -show run"
 bind-key 4-f pcmanfm
@@ -54,7 +55,7 @@ bind-key 4S-r restart
 bind-key 4S-s "systemctl suspend"
 
 # Modify .cwmrc
-bind-key 4S-m "urxvt -e helix .cwmrc"
+bind-key 4S-m "kitty -e micro .cwmrc"
 
 # Quit CWM
 bind-key 4S-q quit
@@ -72,7 +73,8 @@ bind-key 4C-f window-fullscreen
 
 
 # application menu
-command Terminal urxvt
+command Terminal kitty
 command Browser firefox
 command pcmanfm pcmanfm
 command pavucontrol pavucontrol
+command vscodium vscodium
